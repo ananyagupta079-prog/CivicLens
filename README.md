@@ -89,3 +89,27 @@ CivicLens is an open-source civic technology project developed for Hacktoberfest
 **Our vision: A future where citizens can track public promises, examine the evidence, and understand progress in their own communities.**
 
 ### 🌍 CivicLens — Accountability You Can Explore.
+
+## CivicPulse Web Demo
+
+This repository also includes CivicPulse, a civic participation web demo with a Next.js frontend and an optional FastAPI backend. The frontend runs in demo mode without the backend; running the backend enables persistent votes, comments, signups, posts, and live integrity checks.
+
+### Run the backend (optional)
+
+```powershell
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+The API documentation is available at http://localhost:8000/docs. The SQLite database is created and seeded automatically.
+
+### Run the frontend
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. Use Alt+1 for Citizen mode and Alt+2 for Politician mode.
