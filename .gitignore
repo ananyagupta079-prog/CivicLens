@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+.env
+.env.*
+!.env.example
+
+*.db
+*.sqlite3
+npm-debug.log*

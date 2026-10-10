@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.mesh {
+  background: radial-gradient(at 15% 20%, #f9ce34 0, transparent 45%),
+    radial-gradient(at 85% 15%, #ee2a7b 0, transparent 45%),
+    radial-gradient(at 50% 95%, #6228d7 0, transparent 55%), #1a1033;
+}
+@keyframes shimmer { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+.shimmer { background: linear-gradient(90deg,#f1f1f1 25%,#fde4f0 50%,#f1f1f1 75%); background-size: 200% 100%; animation: shimmer 1s infinite; }
+@keyframes pop { 0% { transform: scale(0); opacity: 0 } 35% { transform: scale(1.25); opacity: 1 } 100% { transform: scale(1); opacity: 0 } }
+.heart-pop { animation: pop .8s ease-out forwards; }
+@keyframes sheet { from { transform: translateY(100%) } to { transform: none } }
+.sheet-up { animation: sheet .25s ease-out; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+.fade-in { animation: fade .35s ease-out; }
